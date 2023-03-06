@@ -1,10 +1,10 @@
-// Получаем элементы загрузочного экрана и содержимого сайта
+
 const loadingScreen = document.getElementById('loading-screen');
 const content = document.getElementById('content');
 
-// Запускаем таймер для отображения загрузочного экрана в течение 3 секунд
+
 setTimeout(() => {
-  // Скрываем загрузочный экран и показываем содержимое сайта
+
   loadingScreen.classList.add('fade-out');
   content.classList.add('fade-in');
 }, 1000);
