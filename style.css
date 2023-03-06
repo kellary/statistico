@@ -1,0 +1,173 @@
+/* Стили для фона загрузочного экрана */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Стили для круга на загрузочном экране */
+  #loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f60;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Анимация вращения круга */
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  .infinite-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5d5d5d;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    margin: 100px auto;
+    max-width: 600px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 48px;
+  }
+  
+  p {
+    font-size: 24px;
+  }
+  
+  /* Стили для содержимого сайта */
+  #content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Анимация исчезновения загрузочного экрана */
+  #loading-screen.fade-out {
+    opacity: 0;
+  }
+  
+  /* Анимация появления содержимого сайта */
+  #content.fade-in {
+    opacity: 1;
+  }
+  .lava-background {
+    height: 100vh; /* Устанавливаем высоту фона на 100% высоты окна */
+    overflow: hidden; /* Скрываем содержимое, которое выходит за пределы фона */
+  }
+  *{
+    margin: 0%;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #2d2f33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rain__drop {
+    animation-delay: calc(var(--d) * 10s);
+    animation-duration: calc(var(--a) * 10s);
+    animation-iteration-count: infinite;
+    animation-name: drop;
+    animation-timing-function: linear;
+    height: 40px;
+    left: calc(var(--x) * 1%);
+    position: absolute;
+    top: calc((var(--y) + 50) * -1px);
+  }
+  .rain__drop path {
+    fill: #d55307;
+    opacity: var(--o);
+    transform: scaleY(calc(var(--s) * 1.5));
+  }
+  @-moz-keyframes drop {
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+  }
+  @-webkit-keyframes drop {
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+  }
+  @-o-keyframes drop {
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+  }
+  @keyframes drop {
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+  }
+  
+  .center-box {
+    position: absolute; /* Позиционирование элемента */
+    width: 50%;
+    height: 10% auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    top: 10%; /* Установка верхнего края блока в 50% относительно родительского элемента */
+    left: 50%; /* Установка левого края блока в 50% относительно родительского элемента */
+    transform: translate(-50%, -50%); /* Центрирование элемента */
+    background-color: #333333; /* Установка прозрачного оранжевого цвета фона с помощью rgba */
+    padding: 20px; /* Установка отступов для блока */
+    border-radius: 10px; /* Установка скругления углов блока */
+  }
+  .center-block img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 240px;
+    height: 42px;
+  }
+  a{
+    text-decoration: none;
+    color: orange;
+  }
+  
